@@ -3,15 +3,18 @@ import './App.css';
 import AddShoe from './Components/AddShoe';
 import SearchShoe from './Components/SearchShoe';
 import ViewShoe from './Components/ViewShoe';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-    <AddShoe/>
-    <SearchShoe/>
-    <ViewShoe/>
-    </div>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path ="/" element={<AddShoe/>}/>
+      <Route path ="/search" element={<SearchShoe/>}/>
+      <Route path ="/view" element={<ViewShoe/>}/>
+    </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
